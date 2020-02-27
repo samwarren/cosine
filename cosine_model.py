@@ -67,7 +67,6 @@ class CosineNet(torch.nn.Module):
         logger.info(f"validation mean loss is {mean_epoch_loss}")
         self.writer.add_scalar("val/loss", mean_epoch_loss, epoch)
 
-    # todo might be best to just pass in dataloader objects
     def train_loop(self, train_loader, val_loader, epochs=1000, lr=0.01):
         optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
         for i in range(epochs):
@@ -180,6 +179,4 @@ def parse_args():
 if __name__ == "__main__":
     parse_args()
 
-# todo hyperparams: num hidden layers, learning rate
-
-# todo add argparse cli
+# todo tune hyperparams: num hidden layers, learning rate
