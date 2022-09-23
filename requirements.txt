@@ -2,7 +2,7 @@ certifi==2019.11.28
 chardet==3.0.4
 idna==2.9
 numpy==1.18.1
-protobuf==3.11.3
+protobuf==3.18.3
 pytorch-ignite==0.3.0
 requests==2.23.0
 six==1.14.0
